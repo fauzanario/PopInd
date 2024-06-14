@@ -1,0 +1,435 @@
+*,html,body {
+  font-family: poppins;
+  color: white;
+}
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+/* NAVBAR */
+/* Styles for the navbar */
+/* Styles for the navbar */
+.navbar {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px; /* Mengikuti ukuran font dari .nav-item */
+  text-decoration: none;
+  padding: 10px 15px; /* Sesuaikan padding */
+}
+
+.navbar-brand {
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 40px;
+}
+
+.navbar-brand .pop {
+  color: red;
+}
+
+.navbar-brand .ind {
+  color: white;
+}
+
+@keyframes shimmer {
+  0% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+      text-shadow: 0 0 20px  rgba(255, 255, 255, 1);
+  }
+  100% {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
+
+
+
+.nav-item {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #ffffff; 
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Optional: Additional styles for navbar links on hover */
+.navbar-nav .nav-link:hover {
+  color: #e00f0f; /* Warna teks saat di-hover (opsional) */
+  text-decoration: none;
+}
+
+/* NAVBAR */
+
+/* WELCOME TEXT */
+.carousel-caption1 {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  left: 50px; /* Sesuaikan jarak dari kiri */
+  text-align: left; /* Tekstur teks di tengah kiri */
+  color: #fff; /* Warna teks */
+}
+.carousel-caption1 p {
+  margin: 0;
+  font-size: 24px; /* Sesuaikan ukuran teks */
+}
+.carousel-caption2 {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  right: 50px; 
+  text-align: right; 
+  color: #fff; 
+}
+.carousel-caption2 p {
+  margin: 0;
+  font-size: 24px; 
+}
+.carousel-caption3 {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  left: 50px; 
+  text-align: left; 
+  color: #fff; 
+}
+.carousel-caption3 p {
+  margin: 0;
+  font-size: 24px; 
+}
+/* WELCOME TEXT */
+
+/* KATEGORI CARD */
+.kat-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  padding-bottom: 7x;
+  margin-bottom: 10px;
+}
+.kat-card {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.kat-card img{
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.5s;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.322), rgb(0, 0, 0));
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer a {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.658);
+  border-radius: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  
+}
+.kat-card video {
+  width: 400px; 
+  height: 400px; 
+  object-fit: cover; 
+}
+.kat-card:hover video {
+  object-fit: cover; 
+}
+.kat-card:hover .layer {
+  height: 100%;
+}
+/* KATEGORI CARD */
+
+/* TENTANG KAMI */
+.teks-tentang {
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.profile-kita {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-item {
+  text-align: center;
+  margin-right: 0px; /* Mengatur jarak antara profil */
+}
+
+.profile-item:last-child {
+  margin-right: 0;
+}
+
+.profile-item img {
+  width: 300px;
+  object-fit: cover;
+  height: 300px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.sosmed-kita {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.sosmed-kita a {
+  margin: 0 5px; 
+}
+
+/* TENTANG KAMI */
+
+/* ZPOP */
+.z-bg {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 30% ;
+  filter: brightness(0.5);
+}
+.z-bg-container {
+  position: relative;
+}
+.back-link {
+  position: absolute;
+  top: 40px;
+  left: 40px; 
+  z-index: 1; 
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+}
+.title-pg {
+  position:absolute;
+  top: 130px;
+  left: 50px;
+  z-index: 1;
+  font-size: 50px;
+  font-weight: 700;
+}
+.z-bg-container p {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  font-size: 20px;
+}
+
+.title {
+  cursor: pointer;
+  background-color: #1a1919;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 350px;
+  height: 70px;
+  margin-bottom: 0;
+}
+.title a {
+  text-decoration: none;
+  color: white;
+}
+.title a:active {
+  text-decoration: none;
+  color: white;
+}
+.singer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px; 
+  position: relative;
+  top: 20px;
+  left: 50px;
+  right: 50px;
+  
+}
+.singer img {
+  margin-right: 20px; 
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+/* ZPOP */
+
+/* SINGER */
+.icons {
+  z-index: 1;
+  top: 180px;
+  left: 50px;
+  font-size: 40px;
+  margin-right: 10px;
+}
+.sosmed {
+  position: absolute;
+  z-index: 1;
+  top: 180px;
+  left: 50px;
+}
+.container-lagu {
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.5s
+}
+.container-lagu :hover {
+  background-color: #1a1919;
+  border-radius: 5px;
+}
+.container-lagu.open {
+  height: 150px; 
+}
+.container-lagu.open .deskripsi {
+  opacity: 1; 
+}
+
+.judul-lagu {
+  display: inline;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.lagu h5 {
+  display: inline;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.lagu {
+  padding-bottom: 0;
+}
+.lagu img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.playing {
+  animation: shimmer 2s infinite;
+}
+
+/* SINGER */
+
+.saran {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  padding: 0px;
+  width: fit-content;
+
+}
+
+.saran a {
+  text-decoration: none;
+  color: rgb(192, 192, 192);
+  margin-bottom: 0px;
+ 
+}
+
+@keyframes gradient-text {
+  0% {
+    color: #a1a1a1; /* Warna abu-abu gelap */
+  }
+  50% {
+    color: #eee; /* Warna putih */
+  }
+  100% {
+    color: #9c9c9c; /* Kembali ke warna abu-abu gelap */
+  }
+}
+
+.saran:hover .teks-saran::before,
+.saran:hover .teks-saran::after {
+  width: 50%; 
+}
+
+.saran .teks-saran::before,
+.saran .teks-saran::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 4px;
+  background-color: #ffffff;
+  transition: width 0.7s ease;
+  -webkit-transition: width 0.7s ease;
+  -moz-transition: width 0.7s ease;
+  -ms-transition: width 0.7s ease;
+  -o-transition: width 0.7s ease;
+}
+
+.saran .teks-saran::before {
+  left: 50%;
+  width: 0;
+}
+
+.saran .teks-saran::after {
+  right: 50%;
+  width: 0;
+}
+
+.teks-saran {
+  position: relative;
+  display: inline-block; /* Agar underline hanya menutupi teks */
+  animation: gradient-text 5s infinite; /* Sesuaikan durasi dan timing function sesuai kebutuhan */
+}
+
+
+
